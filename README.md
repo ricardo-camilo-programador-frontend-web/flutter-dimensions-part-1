@@ -2,9 +2,6 @@
 
 > Um aplicativo de gerenciamento de tarefas com técnica Pomodoro integrada, desenvolvido com Flutter.
 
-[🇺🇸 English](#english) | [🇧🇷 Português](#português)
-
-
 ## 🔗 Links Rápidos
 - [Repositório GitHub](https://github.com/ricardo-camilo-programador-frontend-web)
 - [Download na Play Store](#) (em breve)
@@ -14,7 +11,7 @@
 <summary>🇧🇷 Português</summary>
 
 ## 🎯 Visão Geral do Projeto
-Este projeto demonstra competências essenciais para a vaga de desenvolvedor Flutter, incluindo:
+Um aplicativo Flutter que combina gerenciamento de tarefas com a técnica Pomodoro, ajudando os usuários a acompanhar o tempo gasto em cada tarefa enquanto mantêm o foco e a produtividade.
 
 
 ### Objetivos Técnicos

@@ -15,7 +15,9 @@ Um aplicativo Flutter que combina gerenciamento de tarefas com a técnica Pomodo
 
 
 ### 🚀 Funcionalidades Planejadas
-#### Fase 1: Fundação
+
+<details>
+<summary>Fase 1: Fundação - Em desenvolvimento</summary>
 - [ ] Gerenciamento de Tarefas
   - [ ] Operações CRUD para tarefas
   - [ ] Categorias de tarefas
@@ -26,8 +28,10 @@ Um aplicativo Flutter que combina gerenciamento de tarefas com a técnica Pomodo
   - [ ] Configurações personalizadas de tempo
   - [ ] Notificações de pausa
   - [ ] Temporizador em segundo plano
+</details>
 
-#### Fase 2: Persistência e Estado
+<details>
+<summary>Fase 2: Persistência e Estado - Planejado</summary>
 - [ ] Armazenamento Local de Dados
   - [ ] Implementação do Hive
   - [ ] Configuração do banco de dados Floor
@@ -37,8 +41,10 @@ Um aplicativo Flutter que combina gerenciamento de tarefas com a técnica Pomodo
   - [ ] Implementação do Provider
   - [ ] Manipulação de estados complexos
   - [ ] Otimização de desempenho
+</details>
 
-#### Fase 3: API e Recursos Avançados
+<details>
+<summary>Fase 3: API e Recursos Avançados - Planejado</summary>
 - [ ] Integração com Backend
   - [ ] Consumo de API RESTful
   - [ ] Autenticação de usuário
@@ -49,6 +55,7 @@ Um aplicativo Flutter que combina gerenciamento de tarefas com a técnica Pomodo
   - [ ] Relatórios de progresso
   - [ ] Insights de tempo
   - [ ] Funcionalidade de exportação
+</details>
 
 ## 🛠️ Stack Tecnológica
 - Flutter - Framework de UI
@@ -83,7 +90,9 @@ Feito com ☕ por <a href="https://github.com/ricardo-camilo-programador-fronten
 A Flutter application that combines task management with the Pomodoro technique, helping users track time spent on each task while maintaining focus and productivity.
 
 ### 🚀 Planned Features
-#### Fase 1: Fundação
+
+<details>
+<summary>Phase 1: Foundation - In development</summary>
 - [ ] Task Management
   - [ ] CRUD operations for tasks
   - [ ] Task categories
@@ -94,8 +103,10 @@ A Flutter application that combines task management with the Pomodoro technique,
   - [ ] Custom time settings
   - [ ] Break notifications
   - [ ] Background timer
+</details>
 
-#### Fase 2: Persistência e Estado
+<details>
+<summary>Phase 2: Persistence and State - Planned</summary>
 - [ ] Local Data Storage
   - [ ] Hive implementation
   - [ ] Floor database setup
@@ -105,8 +116,10 @@ A Flutter application that combines task management with the Pomodoro technique,
   - [ ] Provider implementation
   - [ ] Complex state handling
   - [ ] Performance optimization
+</details>
 
-#### Fase 3: API e Recursos Avançados
+<details>
+<summary>Phase 3: API and Advanced Features - Planned</summary>
 - [ ] Backend Integration
   - [ ] RESTful API consumption
   - [ ] User authentication
@@ -117,6 +130,7 @@ A Flutter application that combines task management with the Pomodoro technique,
   - [ ] Progress reports
   - [ ] Time insights
   - [ ] Export functionality
+</details>
 
 ## 🛠️ Tech Stack
 - Flutter - UI Framework

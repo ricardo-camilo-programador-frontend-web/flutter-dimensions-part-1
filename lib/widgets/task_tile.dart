@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class TaskTile extends StatelessWidget {
   final String title;
   final bool isDone;
-  final Function(bool?) onChanged;
+  final Function(bool?) onToggle;
 
   TaskTile({
     required this.title,
     required this.isDone,
-    required this.onChanged,
+    required this.onToggle,
   });
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +18,9 @@ class TaskTile extends StatelessWidget {
       title: Text(title),
       leading: Checkbox(
         value: isDone,
-        onChanged: onChanged,
+        onChanged: onToggle,
       ),
     );
   }
+
 }

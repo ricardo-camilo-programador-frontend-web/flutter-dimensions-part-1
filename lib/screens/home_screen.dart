@@ -19,8 +19,8 @@ class HomeScreen extends StatelessWidget {
           return TaskTile(
             title: task.title,
             isDone: task.isDone,
-            onChanged: (value) {
-              // Implement task completion logic
+            onToggle: (value) {
+              Provider.of<TaskProvider>(context, listen: false).updateTaskStatus(task);
             },
           );
         },

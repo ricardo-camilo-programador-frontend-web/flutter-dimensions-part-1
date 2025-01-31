@@ -12,7 +12,9 @@ class TaskProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  // Impplement methods to update and delete tasks
-
+  void updateTaskStatus(Task task) {
+    _tasks[_tasks.indexOf(task)].isDone = !_tasks[_tasks.indexOf(task)].isDone;
+    notifyListeners();
+  }
   // You can also add methods for fetching and managing tasks
 }

@@ -14,7 +14,7 @@ class AddTaskScreen extends StatelessWidget {
         Task(
           id: DateTime.now().toString(),
           title: taskText,
-          isDone: true,
+          isDone: false,
         )
       );
       Navigator.of(context).pop();

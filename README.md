@@ -4,12 +4,98 @@
 
 [🇺🇸 English](#english) | [🇧🇷 Português](#português)
 
+
 ## 🔗 Links Rápidos
-- [Repositório GitHub](#)
+- [Repositório GitHub](https://github.com/ricardo-camilo-programador-frontend-web)
 - [Download na Play Store](#) (em breve)
 - [Download na App Store](#) (em breve)
 
-<h2 id="english">English</h2>
+<details>
+<summary>🇧🇷 Português</summary>
+
+## 🎯 Visão Geral do Projeto
+Este projeto demonstra competências essenciais para a vaga de desenvolvedor Flutter, incluindo:
+
+
+### Objetivos Técnicos
+1. **Arquitetura e Padrões**
+   - Implementação MVVM
+   - Clean Architecture
+   - Princípios SOLID
+   - Injeção de Dependência com GetX
+
+2. **Persistência de Dados**
+   - Hive para dados locais
+   - Floor para SQLite
+   - Sincronização com API
+
+3. **Gerenciamento de Estado**
+   - Provider para estado global
+   - GetX para injeção de dependência
+   - Padrões de reatividade
+
+### Marcos do Projeto
+
+#### Marco 1: MVP Básico (Semana 1-2)
+- [ ] Setup inicial do projeto
+- [ ] Implementação da estrutura MVVM
+- [ ] CRUD básico de tarefas
+- [ ] Timer Pomodoro básico
+
+#### Marco 2: Persistência (Semana 3-4)
+- [ ] Implementação Hive
+- [ ] Configuração Floor
+- [ ] Histórico de tarefas
+- [ ] Estatísticas básicas
+
+#### Marco 3: API e Recursos Avançados (Semana 5-6)
+- [ ] Integração com API REST
+- [ ] Sincronização de dados
+- [ ] Analytics e relatórios
+- [ ] Testes e otimizações
+
+## 🛠️ Implementações Técnicas
+- 📱 UI/UX seguindo Material Design
+- 💾 Persistência local com Hive e Floor
+- 🔄 Gerenciamento de estado com Provider
+- 🎯 Arquitetura MVVM
+- 🌐 Integração REST API
+
+## 📚 Demonstração de Competências
+- Experiência com Flutter
+- Conhecimento de persistência de dados
+- Gerenciamento de estado
+- Padrões de projeto
+- Integração com APIs
+- Versionamento com Git
+
+---
+
+## 🎨 Design Credits
+UI/UX inspirado nas melhores práticas de Material Design e padrões de produtividade.
+
+## 🚀 Technologies
+- Flutter
+- Dart
+- Provider
+- GetX
+- Hive
+- Floor
+- HTTP package
+
+#Flutter #Mobile #Dart #Provider #GetX #Hive #Floor #Git #CleanArchitecture #MVVM
+
+## 📄 License
+MIT © Ricardo Camilo
+---
+
+<p align="center">
+Feito com ☕ por <a href="https://github.com/ricardo-camilo-programador-frontend-web">Ricardo Camilo</a>
+</p>
+</details>
+
+<details>
+<summary>🇺🇸 English</summary>
 
 ## 🎯 Project Overview
 A Flutter application that combines task management with the Pomodoro technique, helping users track time spent on each task while maintaining focus and productivity.
@@ -67,11 +153,22 @@ A Flutter application that combines task management with the Pomodoro technique,
 - UI/UX best practices
 - Testing strategies
 
+## 📄 License
+MIT © Ricardo Camilo
+---
+
+<p align="center">
+Made with ☕ by <a href="https://github.com/ricardo-camilo-programador-frontend-web">Ricardo Camilo</a>
+</p>
+</details>
+
+
 ## 🚀 Getting Started
 
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
+
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)

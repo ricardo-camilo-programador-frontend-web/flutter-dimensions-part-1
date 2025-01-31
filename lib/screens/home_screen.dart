@@ -18,13 +18,23 @@ class HomeScreen extends StatelessWidget {
           final task = tasks[index];
           return TaskTile(
             title: task.title,
+            description: task.description,
+            creationDate: task.creationDate,
+            dueDate: task.dueDate,
+            priority: task.priority,
+            status: task.status,
+            updatedAt: task.updatedAt,
             isDone: task.isDone,
             onToggle: (value) {
               Provider.of<TaskProvider>(context, listen: false).updateTaskStatus(task);
             },
+            onEdit: () {
+              Navigator.of(context).pushNamed('/edit-task', arguments: task);
+            },
             onDelete: () {
               Provider.of<TaskProvider>(context, listen: false).deleteTask(task);
             },
+
           );
         },
       ),

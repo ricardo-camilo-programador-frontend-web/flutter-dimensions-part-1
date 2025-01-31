@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todo List'),
+        title: Text('📝 Forge List'),
       ),
       body: ListView.builder(
         itemCount: tasks.length,

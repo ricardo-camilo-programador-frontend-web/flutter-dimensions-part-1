@@ -16,9 +16,16 @@ class TaskProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  void updateTask(Task task) {
+    final taskIndex = _tasks.indexOf(task);
+    _tasks[taskIndex] = task;
+    notifyListeners();
+  }
+
   void deleteTask(Task task) {
     _tasks.remove(task);
     notifyListeners();
   }
+
   // You can also add methods for fetching and managing tasks
 }

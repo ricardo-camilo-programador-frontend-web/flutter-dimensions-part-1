@@ -34,7 +34,9 @@ class HomeScreen extends StatelessWidget {
             onDelete: () {
               Provider.of<TaskProvider>(context, listen: false).deleteTask(task);
             },
-
+            onDetail: () {
+              Navigator.of(context).pushNamed('/task-detail', arguments: task.id);
+            },
           );
         },
       ),

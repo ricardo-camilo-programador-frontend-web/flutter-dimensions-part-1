@@ -22,6 +22,9 @@ class HomeScreen extends StatelessWidget {
             onToggle: (value) {
               Provider.of<TaskProvider>(context, listen: false).updateTaskStatus(task);
             },
+            onDelete: () {
+              Provider.of<TaskProvider>(context, listen: false).deleteTask(task);
+            },
           );
         },
       ),

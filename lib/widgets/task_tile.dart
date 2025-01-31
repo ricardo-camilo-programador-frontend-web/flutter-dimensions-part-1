@@ -4,12 +4,15 @@ class TaskTile extends StatelessWidget {
   final String title;
   final bool isDone;
   final Function(bool?) onToggle;
+  final Function() onDelete;
 
   TaskTile({
     required this.title,
     required this.isDone,
     required this.onToggle,
+    required this.onDelete,
   });
+
 
 
   @override
@@ -20,7 +23,12 @@ class TaskTile extends StatelessWidget {
         value: isDone,
         onChanged: onToggle,
       ),
+      trailing: IconButton(
+        onPressed: onDelete,
+        icon: Icon(Icons.delete),
+      ),
     );
   }
+
 
 }

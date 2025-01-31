@@ -6,7 +6,6 @@ class TaskProvider with ChangeNotifier {
 
   List<Task> get tasks => [..._tasks];
 
-
   void addTask(Task task) {
     _tasks.add(task);
     notifyListeners();
@@ -14,6 +13,11 @@ class TaskProvider with ChangeNotifier {
 
   void updateTaskStatus(Task task) {
     _tasks[_tasks.indexOf(task)].isDone = !_tasks[_tasks.indexOf(task)].isDone;
+    notifyListeners();
+  }
+
+  void deleteTask(Task task) {
+    _tasks.remove(task);
     notifyListeners();
   }
   // You can also add methods for fetching and managing tasks

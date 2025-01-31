@@ -14,73 +14,58 @@
 Um aplicativo Flutter que combina gerenciamento de tarefas com a técnica Pomodoro, ajudando os usuários a acompanhar o tempo gasto em cada tarefa enquanto mantêm o foco e a produtividade.
 
 
-### Objetivos Técnicos
-1. **Arquitetura e Padrões**
-   - Implementação MVVM
-   - Clean Architecture
-   - Princípios SOLID
-   - Injeção de Dependência com GetX
+### 🚀 Funcionalidades Planejadas
+#### Fase 1: Fundação
+- [ ] Gerenciamento de Tarefas
+  - [ ] Operações CRUD para tarefas
+  - [ ] Categorias de tarefas
+  - [ ] Níveis de prioridade
+  - [ ] Acompanhamento do status das tarefas
+- [ ] Temporizador Pomodoro
+  - [ ] Ciclos de 25/5 minutos
+  - [ ] Configurações personalizadas de tempo
+  - [ ] Notificações de pausa
+  - [ ] Temporizador em segundo plano
 
-2. **Persistência de Dados**
-   - Hive para dados locais
-   - Floor para SQLite
-   - Sincronização com API
+#### Fase 2: Persistência e Estado
+- [ ] Armazenamento Local de Dados
+  - [ ] Implementação do Hive
+  - [ ] Configuração do banco de dados Floor
+  - [ ] Histórico de tarefas
+  - [ ] Estatísticas de controle de tempo
+- [ ] Gerenciamento de Estado
+  - [ ] Implementação do Provider
+  - [ ] Manipulação de estados complexos
+  - [ ] Otimização de desempenho
 
-3. **Gerenciamento de Estado**
-   - Provider para estado global
-   - GetX para injeção de dependência
-   - Padrões de reatividade
+#### Fase 3: API e Recursos Avançados
+- [ ] Integração com Backend
+  - [ ] Consumo de API RESTful
+  - [ ] Autenticação de usuário
+  - [ ] Sincronização de dados
+  - [ ] Backup na nuvem
+- [ ] Recursos Avançados
+  - [ ] Análise de tarefas
+  - [ ] Relatórios de progresso
+  - [ ] Insights de tempo
+  - [ ] Funcionalidade de exportação
 
-### Marcos do Projeto
+## 🛠️ Stack Tecnológica
+- Flutter - Framework de UI
+- Provider - Gerenciamento de Estado
+- Hive - Armazenamento Local
+- Floor - Banco de Dados SQLite
+- Pacote HTTP - Integração com API
+- GetX - Injeção de Dependência
+- MVVM - Padrão de Arquitetura
 
-#### Marco 1: MVP Básico (Semana 1-2)
-- [ ] Setup inicial do projeto
-- [ ] Implementação da estrutura MVVM
-- [ ] CRUD básico de tarefas
-- [ ] Timer Pomodoro básico
-
-#### Marco 2: Persistência (Semana 3-4)
-- [ ] Implementação Hive
-- [ ] Configuração Floor
-- [ ] Histórico de tarefas
-- [ ] Estatísticas básicas
-
-#### Marco 3: API e Recursos Avançados (Semana 5-6)
-- [ ] Integração com API REST
-- [ ] Sincronização de dados
-- [ ] Analytics e relatórios
-- [ ] Testes e otimizações
-
-## 🛠️ Implementações Técnicas
-- 📱 UI/UX seguindo Material Design
-- 💾 Persistência local com Hive e Floor
-- 🔄 Gerenciamento de estado com Provider
-- 🎯 Arquitetura MVVM
-- 🌐 Integração REST API
-
-## 📚 Demonstração de Competências
-- Experiência com Flutter
-- Conhecimento de persistência de dados
-- Gerenciamento de estado
-- Padrões de projeto
-- Integração com APIs
-- Versionamento com Git
-
----
-
-## 🎨 Design Credits
-UI/UX inspirado nas melhores práticas de Material Design e padrões de produtividade.
-
-## 🚀 Technologies
-- Flutter
-- Dart
-- Provider
-- GetX
-- Hive
-- Floor
-- HTTP package
-
-#Flutter #Mobile #Dart #Provider #GetX #Hive #Floor #Git #CleanArchitecture #MVVM
+## 📚 Foco de Aprendizado
+- Princípios de Arquitetura Limpa
+- Padrões de Gerenciamento de Estado
+- Persistência local de dados
+- Integração com API
+- Melhores práticas de UI/UX
+- Estratégias de teste
 
 ## 📄 License
 MIT © Ricardo Camilo

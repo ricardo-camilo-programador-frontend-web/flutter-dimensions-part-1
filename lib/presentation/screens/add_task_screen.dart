@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../logic/providers/task_provider.dart';
-import '../../data/models/task.dart';
-import '../widgets/task_tile.dart';
+import '../../data/models/task.dart' show Task, TaskStatus, TaskPriority;
 import '../widgets/custom_dropdown.dart';
 import '../theme/app_colors.dart';
 
@@ -25,8 +24,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
     final descriptionText = _descriptionController.text;
     final creationDate = _creationDate.toString();
     final dueDate = _dueDate.toString();
-    final priority = _priority.name;
-    final status = _status.name;
     final updatedAt = _updatedAt;
 
     if (taskText.isNotEmpty) {
@@ -36,8 +33,8 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
         description: descriptionText,
         creationDate: creationDate,
         dueDate: dueDate,
-        priority: priority,
-        status: status,
+        priority: _priority,
+        status: _status,
         updatedAt: updatedAt,
         isDone: false,
       ));

@@ -13,6 +13,16 @@ class TaskProvider with ChangeNotifier {
 
   void updateComplete(Task task) {
     _tasks[_tasks.indexOf(task)].isDone = !_tasks[_tasks.indexOf(task)].isDone;
+
+    final taskIsCompleted = _tasks[_tasks.indexOf(task)].isDone;
+
+    if (taskIsCompleted) {
+      _tasks[_tasks.indexOf(task)].status = TaskStatus.completed;
+      return;
+    }
+
+    _tasks[_tasks.indexOf(task)].status = TaskStatus.pending;
+
     notifyListeners();
   }
 

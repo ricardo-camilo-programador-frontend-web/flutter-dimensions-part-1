@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import '../theme/app_colors.dart';
 
 class AppInputDecorations {
   static InputDecoration dropdownDecoration({
     required String labelText,
-    Color borderColor = AppColors.primary,
-
+    Color borderColor = Colors.blue,
   }) {
     return InputDecoration(
       labelText: labelText,
       border: _defaultBorder(borderColor),
       enabledBorder: _defaultBorder(borderColor),
       focusedBorder: _defaultBorder(borderColor.withOpacity(0.8)),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
     );
   }
 

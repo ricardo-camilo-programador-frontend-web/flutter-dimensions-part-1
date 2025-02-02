@@ -4,7 +4,7 @@ import '../../logic/providers/task_provider.dart';
 import '../../data/models/task.dart';
 import '../widgets/task_tile.dart';
 import '../widgets/custom_dropdown.dart';
-
+import '../theme/app_colors.dart';
 
 class AddTaskScreen extends StatefulWidget {
   @override
@@ -25,8 +25,8 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
     final descriptionText = _descriptionController.text;
     final creationDate = _creationDate.toString();
     final dueDate = _dueDate.toString();
-    final priority = _priority.toString();
-    final status = _status.toString();
+    final priority = _priority.name;
+    final status = _status.name;
     final updatedAt = _updatedAt;
 
     if (taskText.isNotEmpty) {
@@ -61,8 +61,37 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               SizedBox(height: 20),
               TextField(
                 controller: _descriptionController,
-                decoration: InputDecoration(labelText: 'Description'),
+                decoration: InputDecoration(
+                  labelText: 'Description',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  filled: true,
+                  fillColor: Colors.grey[100],
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    borderSide: BorderSide(
+                      color: Colors.grey[300]!,
+                      width: 1.0,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    borderSide: BorderSide(
+                      color: AppColors.primary,
+                      width: 2.0,
+                    ),
+                  ),
+                ),
+                maxLines: 3,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black87,
+                ),
               ),
+              SizedBox(height: 20),
               CustomDropdown<TaskPriority>(
                 label: 'Priority',
                 value: _priority,
@@ -96,6 +125,10 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.primary,
+                  textStyle: TextStyle(color: Colors.white),
+                ),
                 onPressed: () => _addTask(context),
                 child: Text('Add Task'),
               )

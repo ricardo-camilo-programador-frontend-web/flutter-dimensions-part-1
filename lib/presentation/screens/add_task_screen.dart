@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../logic/providers/task_provider.dart';
 import '../../data/models/task.dart';
-import '../../presentation/widgets/task_tile.dart';
+import '../widgets/task_tile.dart';
+import '../widgets/custom_dropdown.dart';
 
 
 class AddTaskScreen extends StatefulWidget {
@@ -62,61 +63,36 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 controller: _descriptionController,
                 decoration: InputDecoration(labelText: 'Description'),
               ),
-              DropdownButtonFormField<TaskPriority>(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                    borderSide: BorderSide(color: Colors.blue, width: 2.0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                    borderSide: BorderSide(color: Colors.blue, width: 2.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                    borderSide: BorderSide(color: Colors.blue.shade700, width: 2.0),
-                  ),
-                  contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                ),
-                hint: Text('Select Priority'),
-                isExpanded: true,
+              CustomDropdown<TaskPriority>(
+                label: 'Priority',
                 value: _priority,
-                onChanged: (TaskPriority? newValue) {
-                  setState(() {
-                    if (newValue != null) {
-                      _priority = newValue;
-                    }
-                  });
-                },
-                items: TaskPriority.values.map((TaskPriority priority) {
-                  return DropdownMenuItem<TaskPriority>(
+                items: TaskPriority.values.map((priority) {
+                  return DropdownMenuItem(
                     value: priority,
                     child: Text(priority.toString()),
                   );
                 }).toList(),
+                onChanged: (value) {
+                  if (value != null) {
+                    setState(() => _priority = value);
+                  }
+                },
               ),
               SizedBox(height: 20),
-              DropdownButton<TaskStatus>(
-                hint: Text('Select Status'),
-                isExpanded: true,
+              CustomDropdown<TaskStatus>(
+                label: 'Status',
                 value: _status,
-                onChanged: (TaskStatus? newValue) {
-                  setState(() {
-
-
-                    if (newValue == null) {
-                      return;
-                    }
-
-                    _status = newValue;
-                  });
-                },
-                items: TaskStatus.values.map((TaskStatus status) {
-                  return DropdownMenuItem<TaskStatus>(
+                items: TaskStatus.values.map((status) {
+                  return DropdownMenuItem(
                     value: status,
                     child: Text(status.toString()),
                   );
                 }).toList(),
+                onChanged: (value) {
+                  if (value != null) {
+                    setState(() => _status = value);
+                  }
+                },
               ),
               SizedBox(height: 20),
               ElevatedButton(

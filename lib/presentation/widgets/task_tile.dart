@@ -6,8 +6,8 @@ class TaskTile extends StatelessWidget {
   final String description;
   final String creationDate;
   final String dueDate;
-  final TaskPriority priority;
-  final TaskStatus status;
+  TaskPriority priority;
+  TaskStatus status;
   final String updatedAt;
   final bool isDone;
   final Function(bool?) onToggle;

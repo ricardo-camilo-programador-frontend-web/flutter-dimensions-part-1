@@ -17,8 +17,8 @@ class Task {
   final String description;
   final String creationDate;
   final String dueDate;
-  final TaskPriority priority;
-  final TaskStatus status;
+  TaskPriority priority;
+  TaskStatus status;
   final String updatedAt;
   bool isDone;
 

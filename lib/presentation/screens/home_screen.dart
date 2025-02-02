@@ -17,6 +17,13 @@ class HomeScreen extends StatelessWidget {
         itemCount: tasks.length,
         itemBuilder: (ctx, index) {
           final task = tasks[index];
+
+          if (tasks.isEmpty) {
+            return Center(
+              child: Text('No tasks found'),
+            );
+          }
+
           return TaskTile(
             title: task.title,
             description: task.description,

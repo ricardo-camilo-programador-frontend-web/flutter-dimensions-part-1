@@ -24,10 +24,9 @@ class TaskProvider with ChangeNotifier {
 
   void updateTaskPriority(Task task) {
     final index = _tasks.indexOf(task);
-    
+
     notifyListeners();
   }
-
 
   void updateTaskStatus(Task task) {
     final index = _tasks.indexOf(task);
@@ -35,12 +34,10 @@ class TaskProvider with ChangeNotifier {
     notifyListeners();
   }
 
-
   void deleteTask(Task task) {
     _tasks.remove(task);
     notifyListeners();
   }
-
 
   // You can also add methods for fetching and managing tasks
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../logic/providers/task_provider.dart';
 import '../widgets/task_tile.dart';
+import '../../data/models/task.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -21,33 +22,36 @@ class HomeScreen extends StatelessWidget {
             description: task.description,
             creationDate: task.creationDate,
             dueDate: task.dueDate,
-            priority: TaskPriority.values[int.parse(task.priority)],
-            status: TaskStatus.values[int.parse(task.status)],
+            priority: task.priority,
+            status: task.status,
             updatedAt: task.updatedAt,
             isDone: task.isDone,
-
             onToggle: (value) {
-              Provider.of<TaskProvider>(context, listen: false).updateComplete(task);
+              Provider.of<TaskProvider>(context, listen: false)
+                  .updateComplete(task);
             },
             onEdit: () {
               Navigator.of(context).pushNamed('/edit-task', arguments: task);
             },
             onDelete: () {
-              Provider.of<TaskProvider>(context, listen: false).deleteTask(task);
+              Provider.of<TaskProvider>(context, listen: false)
+                  .deleteTask(task);
             },
             onDetail: () {
-              Navigator.of(context).pushNamed('/task-detail', arguments: task.id);
+              Navigator.of(context)
+                  .pushNamed('/task-detail', arguments: task.id);
             },
             onChancePriority: (priority) {
-              Provider.of<TaskProvider>(context, listen: false).updateTaskPriority(task);
+              Provider.of<TaskProvider>(context, listen: false)
+                  .updateTaskPriority(task);
             },
             onChanceStatus: (status) {
-              Provider.of<TaskProvider>(context, listen: false).updateTaskStatus(task);
+              Provider.of<TaskProvider>(context, listen: false)
+                  .updateTaskStatus(task);
             },
           );
         },
       ),
-
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).pushNamed('/add-task');

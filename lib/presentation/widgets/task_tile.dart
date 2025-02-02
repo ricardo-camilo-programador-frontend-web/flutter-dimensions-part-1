@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
-
-enum TaskPriority {
-  low,
-  medium,
-  high,
-}
-
-enum TaskStatus {
-  pending,
-  completed,
-}
+import '../../data/models/task.dart' show Task, TaskStatus, TaskPriority;
 
 class TaskTile extends StatelessWidget {
-
   final String title;
   final String description;
   final String creationDate;
@@ -25,11 +14,9 @@ class TaskTile extends StatelessWidget {
   final Function() onEdit;
   final Function() onDelete;
 
-
   final Function() onDetail;
   final Function(TaskPriority) onChancePriority;
   final Function(bool) onChanceStatus;
-
 
   TaskTile({
     required this.title,
@@ -51,14 +38,12 @@ class TaskTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(title),
-      leading: Checkbox(
-        value: isDone,
-        onChanged: onToggle,
-      ),
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
+        title: Text(title),
+        leading: Checkbox(
+          value: isDone,
+          onChanged: onToggle,
+        ),
+        trailing: Row(mainAxisSize: MainAxisSize.min, children: [
           IconButton(
             onPressed: onEdit,
             icon: Icon(Icons.edit),
@@ -79,11 +64,6 @@ class TaskTile extends StatelessWidget {
             onPressed: () => onChanceStatus(status == TaskStatus.pending),
             icon: Icon(Icons.pending_actions),
           )
-        ]
-      )
-
-    );
+        ]));
   }
-
-
 }

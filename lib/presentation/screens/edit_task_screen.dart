@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../providers/task_provider.dart';
-import '../models/task.dart';
+import '../../logic/providers/task_provider.dart';
+import '../../data/models/task.dart';
 
 class EditTaskScreen extends StatefulWidget {
   @override

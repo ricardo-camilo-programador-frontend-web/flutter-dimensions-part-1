@@ -63,8 +63,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  filled: true,
-                  fillColor: Colors.grey[100],
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
                   enabledBorder: OutlineInputBorder(
@@ -123,7 +121,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primary,
                   textStyle: TextStyle(color: Colors.white),
                 ),
                 onPressed: () => _addTask(context),

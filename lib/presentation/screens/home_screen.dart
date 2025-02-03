@@ -13,57 +13,62 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('📝 Forge List'),
       ),
-      body: ListView.builder(
-        itemCount: tasks.length,
-        itemBuilder: (ctx, index) {
-          final task = tasks[index];
+      body: tasks.isEmpty
+          ? const Center(
+              child: Text(
+                'No tasks found',
+                semanticsLabel: 'Empty task list',
+              ),
+            )
+          : ListView.builder(
+              itemCount: tasks.length,
+              itemBuilder: (ctx, index) {
+                final task = tasks[index];
 
-          if (tasks.isEmpty) {
-            return Center(
-              child: Text('No tasks found'),
-            );
-          }
-
-          return TaskTile(
-            title: task.title,
-            description: task.description,
-            creationDate: task.creationDate,
-            dueDate: task.dueDate,
-            priority: task.priority,
-            status: task.status,
-            updatedAt: task.updatedAt,
-            isDone: task.isDone,
-            onToggle: (value) {
-              Provider.of<TaskProvider>(context, listen: false)
-                  .updateComplete(task);
-            },
-            onEdit: () {
-              Navigator.of(context).pushNamed('/edit-task', arguments: task);
-            },
-            onDelete: () {
-              Provider.of<TaskProvider>(context, listen: false)
-                  .deleteTask(task);
-            },
-            onDetail: () {
-              Navigator.of(context)
-                  .pushNamed('/task-detail', arguments: task.id);
-            },
-            onChancePriority: (priority) {
-              Provider.of<TaskProvider>(context, listen: false)
-                  .updateTaskPriority(task);
-            },
-            onChanceStatus: (status) {
-              Provider.of<TaskProvider>(context, listen: false)
-                  .updateTaskStatus(task);
-            },
-          );
-        },
-      ),
+                return TaskTile(
+                  title: task.title,
+                  description: task.description,
+                  creationDate: task.creationDate,
+                  dueDate: task.dueDate,
+                  priority: task.priority,
+                  status: task.status,
+                  updatedAt: task.updatedAt,
+                  isDone: task.isDone,
+                  onToggle: (value) {
+                    Provider.of<TaskProvider>(context, listen: false)
+                        .updateComplete(task);
+                  },
+                  onEdit: () {
+                    Navigator.of(context)
+                        .pushNamed('/edit-task', arguments: task);
+                  },
+                  onDelete: () {
+                    Provider.of<TaskProvider>(context, listen: false)
+                        .deleteTask(task);
+                  },
+                  onDetail: () {
+                    Navigator.of(context)
+                        .pushNamed('/task-detail', arguments: task.id);
+                  },
+                  onChancePriority: (priority) {
+                    Provider.of<TaskProvider>(context, listen: false)
+                        .updateTaskPriority(task);
+                  },
+                  onChanceStatus: (status) {
+                    Provider.of<TaskProvider>(context, listen: false)
+                        .updateTaskStatus(task);
+                  },
+                );
+              },
+            ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).pushNamed('/add-task');
         },
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+          semanticLabel: 'Add task',
+        ),
       ),
     );
   }

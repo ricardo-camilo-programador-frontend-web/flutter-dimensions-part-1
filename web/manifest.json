@@ -1,11 +1,11 @@
 {
-    "name": "Gritos do Abismo",
-    "short_name": "Abismo",
+    "name": "time_forge_dimensions_part_1",
+    "short_name": "time_forge_dimensions_part_1",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0A0A0A",
-    "theme_color": "#0A0A0A",
-    "description": "Despertador macabro com experiência imersiva no Abismo.",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

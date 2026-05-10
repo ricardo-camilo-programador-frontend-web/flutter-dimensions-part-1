@@ -10,7 +10,6 @@ jobs:
   build:
     runs-on: self-hosted
     timeout-minutes: 20
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -28,3 +27,20 @@ jobs:
 
       - name: Build
         run: flutter build web
+
+  sonar:
+    name: Analise SonarQube
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PATH
+        run: echo "/usr/local/bin" >> $GITHUB_PATH
+
+      - name: Instalar dependencias
+        run: pnpm install --ignore-scripts
+
+      - name: Run SonarScanner
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: /opt/sonar-scanner/bin/sonar-scanner

@@ -1,3 +1,4 @@
+[![CI](https://github.com/ricardo-camilo-programador-frontend-web/flutter-dimensions-part-1/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardo-camilo-programador-frontend-web/flutter-dimensions-part-1/actions)
 # ⌛ Time Forge - Dimensions Part 1
 
 > Um aplicativo de gerenciamento de tarefas com técnica Pomodoro integrada, desenvolvido com Flutter.

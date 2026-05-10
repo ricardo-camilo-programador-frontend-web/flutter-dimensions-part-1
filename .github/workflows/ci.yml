@@ -38,7 +38,7 @@ jobs:
         run: echo "/usr/local/bin" >> $GITHUB_PATH
 
       - name: Instalar dependencias
-        run: pnpm install --ignore-scripts
+        run: echo 'No install needed - no package.json'
 
       - name: Run SonarScanner
         env:
